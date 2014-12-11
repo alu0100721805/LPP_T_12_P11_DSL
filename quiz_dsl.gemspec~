@@ -6,10 +6,10 @@ require 'quiz_dsl/version'
 Gem::Specification.new do |spec|
   spec.name          = "quiz_dsl"
   spec.version       = QuizDsl::VERSION
-  spec.authors       = ["Juan Jose Gregorio  Diaz Marrero"]
+  spec.authors       = ["Juan Jose Gregorio  Diaz Marrero, Miguel Aurelio García González"]
   spec.email         = ["alu0100721805@ull.edu.es"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.summary       = %q{Clase para escribir un examen en un DSL bajo ruby}
+  spec.description   = %q{Práctica 11 LPP}
   spec.homepage      = ""
   spec.license       = "MIT"
 
