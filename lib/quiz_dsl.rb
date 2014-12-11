@@ -17,18 +17,24 @@ module QuizDsl
 		# e.wrong => "Respuesta incorrecta 3",
 		# e.wrong => "Respuesta correcta"
 		# }
-		def initialize(name)
+		def initialize(name, &bloque)
 			raise ArgumentError, "El nombre del cuestionario tiene que ser una cadena" unless name.is_a? String
 			@count = 0
 			@aciertos = 0
 			@name = name
 			@questions = []
-			yield self
+		    if block_given?
+			if (bloque.arity == 1)
+			  yield self
+			else
+			 instance_eval &bloque
+			end
+		    end
 		end
 		# Preguntas incorrectas
 		def wrong
 			@count += 1
-			[@count, WRONG]
+			"wrong#{@count}:"
 		end
 		# Preguntas correctas
 		def right

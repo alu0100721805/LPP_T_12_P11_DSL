@@ -4,10 +4,16 @@ include QuizDsl
 
 describe Quiz do
 	before :all do
-		@quiz = Quiz.new("test"){ |e|
+		@quiz = Quiz.new("test1"){ |e|
 		e.question "Pregunta 1",
-		e.right => "Answer 1" ,
-		e.wrong => "Answer2"
+		e.right => "Respuesta 1" ,
+		e.wrong => "Respuesta 2"
+		}
+		@quiz2 = Quiz.new("test2"){ 
+		question "Pregunta 1",
+		right => "Respuesta 1",
+		wrong => "Respuesta 2",
+		wrong => "Respuesta 2"
 		}
 	end
 	it "Debe tener un método 'question' para declarar preguntas" do

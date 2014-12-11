@@ -1,4 +1,5 @@
 require 'quiz_dsl.rb'
+require 'spec_helper.rb'
 include QuizDsl
 
 describe Quiz do
