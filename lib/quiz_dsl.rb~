@@ -1,7 +1,6 @@
 require "quiz_dsl/version"
 
 module QuizDsl
-
   	WRONG = false
 	RIGHT = true
 	# Clase Quiz DSL
